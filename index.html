@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Convertisseur de date Hijri</title>
+</head>
+<body>
+	<h1>Convertisseur de date Hijri</h1>
+	
+	<p>Entrez une date grégorienne :</p>
+	
+	<input type="date" id="date-input">
+	
+	<button onclick="convert()">Convertir</button>
+	
+	<p>Date Hijri correspondante : <span id="hijri-date"></span></p>
+	
+	<script>
+		function convert() {
+			// Récupération de la date grégorienne entrée par l'utilisateur
+			const dateInput = document.getElementById("date-input").value;
+			
+			// Conversion de la date en Hijri
+			const hijriDate = convertGregorianToHijri(dateInput);
+			
+			// Affichage de la date Hijri en libellé
+			const hijriDateString = formatHijriDate(hijriDate);
+			document.getElementById("hijri-date").innerHTML = hijriDateString;
+		}
+		
+		function convertGregorianToHijri(date) {
+			// Ici, vous devriez écrire le code qui convertit la date grégorienne en Hijri.
+			// Il existe de nombreuses bibliothèques JavaScript pour cela, ou vous pouvez écrire votre propre code de conversion.
+		}
+		
+		function formatHijriDate(hijriDate) {
+			// Ici, vous devriez écrire le code qui formatte la date Hijri en libellé.
+			// Par exemple, vous pouvez utiliser un tableau pour stocker les noms des mois Hijri et utiliser l'objet Date JavaScript pour obtenir le jour de la semaine.
+			// Ensuite, vous pouvez concaténer ces informations pour former une chaîne de caractères qui ressemble à "20 Ramadan 1444 (jeudi)".
+		}
+	</script>
+</body>
+</html>
